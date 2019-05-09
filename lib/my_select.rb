@@ -4,6 +4,8 @@ def my_select(collection)
   while i < collection.length 
   array << yield(collection[i])
   i += 1 
+  my_select(collection) do |num| 
+    collection.select 
 end
  
 end 
