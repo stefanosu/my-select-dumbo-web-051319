@@ -1,13 +1,12 @@
 def my_select(array) 
-
-i = 0
+count = 0
 result = []
 
-while count < array.length 
-  if yield(array[i]) == true
-  result << (array[i])
+while count < array.size
+  if yield(array[count]) == true
+  result.push(array[count])
 end
-  i += 1
+  count+=1
 end
 result
-end  
+end
